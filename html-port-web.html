@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kervein Kyle P. Santos — Web Developer</title>
+<meta name="description" content="Portfolio of Kervein Kyle P. Santos, Web Developer.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css-port-web.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+
+<!-- ===== NAV ===== -->
+<header class="site-header" id="siteHeader">
+  <nav class="nav container">
+    <a href="#home" class="logo">Kervein<span class="accent-text">Kyle</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="btn btn-gradient nav-cta">Contact Me</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy" data-reveal>
+      <h1 class="hero-title">Hi, It's <span class="accent-text">Kervein</span></h1>
+      <h2 class="hero-subtitle">I'm a <span class="accent-text">Web Developer</span></h2>
+
+      <p class="hero-desc">
+        I build things for the web — from clean interfaces to the systems behind them. 
+        I like taking ideas, figuring out how to make them work, and turning them into something people actually want to use. 
+        Good design, solid code, problem solving, and a little bit of obsession over the details.
+      </p>
+
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">code with kervein &lt;/&gt;</span>
+        </div>
+        <pre class="terminal-body"><code><span class="tok-key">const</span> <span class="tok-var">developer</span> <span class="tok-op">=</span> {
+  <span class="tok-prop">name</span>: <span class="tok-str">"Kervein Kyle P. Santos"</span>,
+  <span class="tok-prop">role</span>: <span class="typed" id="typedRole"></span><span class="cursor">|</span>
+};</code></pre>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/kervein" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.08.78 2.18 0 1.57-.02 2.84-.02 3.23 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kervein-kyle-santos-139a8a249/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/kerveinkyle/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9a3.9 3.9 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07ZM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.9 5.9 0 0 0-2.13 1.39A5.9 5.9 0 0 0 .62 4.15C.32 4.9.12 5.77.06 7.05.01 8.33 0 8.74 0 12s.01 3.67.06 4.95c.06 1.28.26 2.15.56 2.91.3.79.71 1.46 1.38 2.13.66.66 1.33 1.07 2.12 1.38.76.3 1.63.5 2.91.56C8.33 24 8.74 24 12 24s3.67-.01 4.95-.06c1.28-.06 2.15-.26 2.91-.56a5.92 5.92 0 0 0 2.13-1.38 5.92 5.92 0 0 0 1.38-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.93 5.93 0 0 0-1.38-2.12A5.93 5.93 0 0 0 19.86.62c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"/></svg>
+        </a>
+    <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.2 1.3-3.4 3.3-3.4.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.4 2.9h-1.8v7A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gradient">Collab With Me</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-media" data-reveal>
+      <div class="hero-glow-ring">
+        <div class="hero-avatar">
+          <jpeg src="_DSC2787.JPG">
+        </div>
+      </div>
+      <div class="float-chip chip-top">
+        <span class="chip-dot"></span> Available for work
+      </div>
+      <div class="float-chip chip-bottom">
+        <strong>1+</strong> Year building for the web
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+    <span></span>
+  </a>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-media" data-reveal>
+      <div class="about-frame">
+        <div class="about-frame-inner">
+          <span class="avatar-initials small">KS</span>
+        </div>
+      </div>
+      <div class="about-stat-card">
+        <span class="stat-num">20+</span>
+        <span class="stat-label">Projects shipped</span>
+      </div>
+    </div>
+
+    <div class="about-copy" data-reveal>
+      <p class="eyebrow">// about.me</p>
+      <h2 class="section-title">Building things for the <span class="accent-text">web</span>, with care.</h2>
+      <p class="section-desc">
+        I’m Kervein Kyle P. Santos, a Web Developer and Problem Solver who turns ideas into clean, functional, and meaningful digital experiences.
+        I work across the stack—from crafting responsive front ends to building the APIs and systems behind them.
+        I care about the details that make a product feel finished: performance, accessibility, usability, and a little bit of polish.
+        I don’t just build websites. I solve problems, explore better ways to create, and build things that are useful, intentional, and worth remembering.
+      </p>
+
+      <div class="about-list">
+        <div class="about-item">
+          <span class="about-item-num">01</span>
+          <div>
+            <h3>Front-End Development</h3>
+            <p>Responsive, accessible interfaces built with modern HTML, CSS and JavaScript.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <span class="about-item-num">02</span>
+          <div>
+            <h3>Back-End & APIs</h3>
+            <p>Server logic, databases, and integrations that keep everything running smoothly.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <span class="about-item-num">03</span>
+          <div>
+            <h3>Problem Solving</h3>
+            <p>I like breaking down messy requirements into clean, maintainable code.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="education-skills">
+        <article class="education-card">
+          <p class="eyebrow">// education</p>
+          <h3>Bachelor's Degree in Computer Engineering</h3>
+          <p>I’m an undergraduate Computer Engineering student with a focus on software development, user experience, and responsive web systems. 
+             I enjoy turning ideas into interfaces that are simple, functional, and easy to use, while paying attention to the details that make a website feel polished.</p>
+        </article>
+        <article class="skills-card">
+          <p class="eyebrow">// personal skills</p>
+          <div class="skills-grid">
+            <span class="skill-chip">Basic HTML</span>
+            <span class="skill-chip">Basic CSS</span>
+            <span class="skill-chip">Basic JS</span>
+            <span class="skill-chip">Basic Python</span>
+            <span class="skill-chip">UI/UX Design</span>
+            <span class="skill-chip">Responsive Layouts</span>
+            <span class="skill-chip">Problem Solving</span>
+            <span class="skill-chip">Collaboration</span>
+          </div>
+        </article>
+      </div>
+
+      <a href="#contact" class="btn btn-outline">Let's Talk</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow center">// services.list()</p>
+      <h2 class="section-title center">What I <span class="accent-text">Do</span></h2>
+      <p class="section-desc center">
+        A few of the ways I can help bring your project to life, from the
+        first wireframe to a deployed, working product.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+        </div>
+        <h3>Web Design</h3>
+        <p>Clean, purposeful layouts that put your content and users first — designed mobile-first, every time.</p>
+      </article>
+
+      <article class="service-card" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
+        </div>
+        <h3>Web Development</h3>
+        <p>Full front-to-back builds — fast-loading, responsive, and maintainable, using the right tools for the job.</p>
+      </article>
+
+      <article class="service-card" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <h3>Performance & SEO</h3>
+        <p>Sites tuned to load fast and rank well, from image optimization to semantic, crawlable markup.</p>
+      </article>
+
+      <article class="service-card" data-reveal>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5Z"/></svg>
+        </div>
+        <h3>Maintenance & Support</h3>
+        <p>Ongoing updates, bug fixes, and improvements to keep your site secure and running smoothly.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow center">// projects.map()</p>
+      <h2 class="section-title center">Featured <span class="accent-text">Projects</span></h2>
+      <p class="section-desc center">
+        A curated selection of live brand, event, and web projects that show design, production, and digital delivery.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card project-featured" data-reveal>
+        <div class="project-thumb thumb-kanto">
+          <span class="project-tag">Visual Identity</span>
+        </div>
+        <div class="project-body">
+          <h3>Kanto Vibes</h3>
+          <p>For Kanto Vibes, I developed the visual identity and branding for a local food business. From logo design to digital mockups and photography, I shaped a fun, casual presentation that works across social, signage, and promotional materials.</p>
+          <div class="project-stack">
+            <span>Social Media Management</span><span>Marketing</span><span>Photography</span>
+          </div>
+          <a href="#" class="project-link">View concept →</a>
+        </div>
+      </article>
+
+      <article class="project-card project-featured" data-reveal>
+        <div class="project-thumb thumb-mrms">
+          <span class="project-tag">Event Media</span>
+        </div>
+        <div class="project-body">
+          <h3>Mr. and Ms. Engineering 2023</h3>
+          <p>I supported the media and production team by capturing photography and video content throughout the event. The work focused on storytelling, fast turnaround, and high-quality visuals for promotion and archival use.</p>
+          <div class="project-stack">
+            <span>Photography</span><span>Videography</span><span>Editing</span>
+          </div>
+          <a href="#" class="project-link">See the coverage →</a>
+        </div>
+      </article>
+
+      <article class="project-card project-featured" data-reveal>
+        <div class="project-thumb thumb-counter24">
+          <span class="project-tag">Web Development</span>
+        </div>
+        <div class="project-body">
+          <h3>Favor Church Counter Culture 2024</h3>
+          <p>Built the event website for Counter Culture 2024, focusing on a bold, modern experience. 
+             The goal was a smooth mobile-first layout with strong visual storytelling and a website that matched the energy of the event.</p>
+          <div class="project-stack">
+            <span>Web Development</span><span>Elementor</span><span>CSS</span>
+          </div>  
+          <a href="https://counterculture2024.favor.church/" target="_blank" class="project-link">Visit live site →</a>
+        </div>
+      </article>
+
+      <article class="project-card project-featured" data-reveal>
+        <div class="project-thumb thumb-counter25">
+          <span class="project-tag">Web Platform</span>
+        </div>
+        <div class="project-body">
+          <h3>Favor Church Counter Culture 2025</h3>
+          <p>Created the Counter Culture 2025 website with mobile performance and user experience in mind. 
+            This project combined quick iteration, careful layout, and a polished event presence online.</p>
+          <div class="project-stack">
+            <span>Web Development</span><span>Elementor</span><span>Figma</span>
+          </div>
+          <a href="https://events.favor.church/counterculture2025" target="_blank" class="project-link">Visit live site →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy" data-reveal>
+      <p class="eyebrow">// contact.send()</p>
+      <h2 class="section-title">Let's build something <span class="accent-text">great</span> together.</h2>
+      <p class="section-desc">
+        Have a project in mind, or just want to say hi? My inbox is open —
+        fill out the form or reach me directly.
+      </p>
+
+      <ul class="contact-details">
+        <li>
+          <span class="contact-icon">✉</span>
+          <div><span class="contact-label">Email</span><a href="mailto:santoskerveinkyle@gmail.com">santoskerveinkyle@gmail.com</a></div>
+        </li>
+        <li>
+          <span class="contact-icon">☎</span>
+          <div><span class="contact-label">Phone</span><a href="tel:+639201169132">+63 920 116 9132</a></div>
+        </li>
+        <li>
+          <span class="contact-icon">⌖</span>
+          <div><span class="contact-label">Location</span><span>Philippines</span></div>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact-form" id="contactForm" data-reveal>
+      <div class="form-row">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" placeholder="Your full name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+      </div>
+      <label>
+        <span>Subject</span>
+        <input type="text" name="subject" placeholder="What's this about?" required>
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      </label>
+      <button type="submit" class="btn btn-gradient full-width">Send Message</button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#home" class="logo">Kervein<span class="accent-text">Kyle</span></a>
+    <p>© <span id="year"></span> KerveinKyle. All rights reserved.</p>
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+  </div>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+<script src="js-port-web.js"></script>
+</body>
+</html>
