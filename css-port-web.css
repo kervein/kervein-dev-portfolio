@@ -462,6 +462,12 @@ input, textarea{ font-family: inherit; }
   aspect-ratio: 4/5;
   background: linear-gradient(160deg, #1a1210, #0c0806);
   display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.about-photo{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .about-stat-card{
   position: absolute;
