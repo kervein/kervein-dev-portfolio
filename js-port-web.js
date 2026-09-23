@@ -121,4 +121,40 @@ document.addEventListener('DOMContentLoaded', () => {
     typedEl.textContent = roles[0];
   }
 
+  /* ---------- Contact form submission ---------- */
+  const form = document.getElementById('contactForm');
+  const note = document.getElementById('formNote');
+
+  if (form && note) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const submitButton = form.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+      note.textContent = '';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        const result = await response.json();
+
+        if (!response.ok || (result.success !== 'true' && result.success !== true)) {
+          throw new Error(result.message || 'The message could not be sent.');
+        }
+
+        note.textContent = 'Message sent successfully. Thank you for reaching out!';
+        form.reset();
+      } catch (error) {
+        note.textContent = `${error.message} Please try again or email santoskerveinkyle@gmail.com directly.`;
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      }
+    });
+  }
+
 });
