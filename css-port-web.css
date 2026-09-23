@@ -620,6 +620,7 @@ input, textarea{ font-family: inherit; }
 .thumb-mrms{ background: linear-gradient(140deg, rgba(255,255,255,.08), rgba(10,10,10,.72)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; }
 .thumb-counter24{ background: linear-gradient(140deg, rgba(255,90,60,.20), rgba(10,10,10,.65)), url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; }
 .thumb-counter25{ background: linear-gradient(140deg, rgba(255,85,70,.18), rgba(10,10,10,.65)), url('https://events.favor.church/wp-content/uploads/2025/08/IMG_0483-1.jpg') center/cover no-repeat; }
+.thumb-labflow{ background: radial-gradient(circle at 75% 20%, rgba(74,222,128,.3), transparent 28%), linear-gradient(140deg, #10251d, #111114 70%); }
 .project-tag{
   position: relative;
   z-index: 1;
