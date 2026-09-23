@@ -121,16 +121,4 @@ document.addEventListener('DOMContentLoaded', () => {
     typedEl.textContent = roles[0];
   }
 
-  /* ---------- Contact form (front-end only demo) ---------- */
-  const form = document.getElementById('contactForm');
-  const note = document.getElementById('formNote');
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      note.textContent = 'Thanks for reaching out! This form is a front-end demo — connect it to a backend or a service like Formspree to receive real messages.';
-      form.reset();
-    });
-  }
-
 });
