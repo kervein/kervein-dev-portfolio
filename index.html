@@ -2,11 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=html-port-web.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kervein Kyle P. Santos</title>
 </head>
 <body>
-  <p>Opening portfolio...</p>
-  <script>window.location.replace('html-port-web.html');</script>
+  <p>Loading portfolio...</p>
+  <script>
+    fetch('html-port-web.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Portfolio page could not be loaded.');
+        return response.text();
+      })
+      .then(markup => {
+        document.open();
+        document.write(markup);
+        document.close();
+      })
+      .catch(() => {
+        document.body.innerHTML = '<p>Portfolio unavailable. Please refresh the page.</p>';
+      });
+  </script>
 </body>
 </html>
