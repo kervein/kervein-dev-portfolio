@@ -524,7 +524,25 @@ input, textarea{ font-family: inherit; }
 .education-card h3{
   font-family: var(--font-display);
   font-size: 1.2rem;
-  margin: 0 0 12px;
+  margin: 0;
+}
+.education-entry + .education-entry{ margin-top: 16px; }
+.education-entry-heading{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+.education-entry-heading span{
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: .86rem;
+  white-space: nowrap;
+}
+.education-entry > p{
+  margin: 7px 0 0 12px;
+  color: var(--text);
+  font-size: .94rem;
 }
 /* =============================================================
    Services
