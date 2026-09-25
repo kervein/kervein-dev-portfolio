@@ -105,9 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Typing effect in hero terminal ---------- */
   const typedEl = document.getElementById('typedRole');
   const roles = ['"Web Developer"', '"Front-End Developer"', '"Back-End Developer"'];
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  if (typedEl && !prefersReducedMotion) {
+  if (typedEl) {
     let roleIndex = 0;
     let charIndex = 0;
     let deleting = false;
@@ -139,8 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
     tick();
-  } else if (typedEl) {
-    typedEl.textContent = roles[0];
   }
 
   /* ---------- Contact form submission ---------- */
