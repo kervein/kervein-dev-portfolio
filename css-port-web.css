@@ -532,6 +532,12 @@ input, textarea{ font-family: inherit; }
    Services
    ============================================================= */
 .services{ padding: 72px 0 120px; border-top: 1px solid var(--border); }
+.services-heading{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 42px;
+}
+.services-heading .eyebrow{ margin: 0; text-align: center; }
 .services-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
