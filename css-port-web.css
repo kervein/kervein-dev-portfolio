@@ -382,6 +382,32 @@ input, textarea{ font-family: inherit; }
   border-radius: 50%;
 }
 .hero-avatar img + .avatar-initials{ display: none; }
+.hero-secondary-frame{
+  position: absolute;
+  right: 0;
+  bottom: 6%;
+  width: 34%;
+  aspect-ratio: 3 / 4;
+  padding: 7px;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--gradient) border-box;
+  box-shadow: 0 24px 50px -22px rgba(0,0,0,.8);
+  transform: rotate(7deg);
+  overflow: hidden;
+  z-index: 2;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.hero-secondary-frame:hover{
+  transform: rotate(3deg) translateY(-8px);
+  box-shadow: 0 30px 58px -20px rgba(255,90,60,.4);
+}
+.hero-secondary-frame img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
 .avatar-initials{
   font-family: var(--font-display);
   font-weight: 700;
@@ -963,6 +989,7 @@ input, textarea{ font-family: inherit; }
 
   .float-chip{ display: none; }
   .hero-glow-ring{ width: 78vw; }
+  .hero-secondary-frame{ right: 2%; width: 28%; }
 
   .about-stat-card{ right: 4px; bottom: -22px; padding: 14px 20px; }
 
