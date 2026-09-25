@@ -739,7 +739,7 @@ input, textarea{ font-family: inherit; }
 .github-section{
   padding: 78px 0 86px;
   border-top: 1px solid var(--border);
-  background: var(--bg-soft);
+  background: var(--bg);
 }
 .github-heading{
   display: flex;
@@ -764,7 +764,7 @@ input, textarea{ font-family: inherit; }
   padding: 18px;
   border: 1px solid rgba(255,255,255,.18);
   border-radius: var(--radius-sm);
-  background: #0b1015;
+  background: var(--bg);
   transition: border-color .25s ease, box-shadow .25s ease, transform .25s var(--ease);
 }
 .github-contributions:hover{
@@ -772,7 +772,7 @@ input, textarea{ font-family: inherit; }
   box-shadow: 0 18px 48px -28px rgba(255,90,60,.45);
   transform: translateY(-3px);
 }
-.github-calendar{ border: 1px solid #3a424c; border-radius: 12px; padding: 22px 20px 18px; overflow: hidden; }
+.github-calendar{ border: 1px solid #3a424c; border-radius: 12px; padding: 22px 20px 18px; overflow: hidden; background: var(--bg); }
 .github-months{
   display: grid;
   grid-template-columns: repeat(13, 1fr);
