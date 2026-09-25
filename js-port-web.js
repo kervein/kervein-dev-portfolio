@@ -8,6 +8,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- GitHub contribution calendar ---------- */
+  const contributionGrid = document.querySelector('.contribution-grid');
+  if (contributionGrid) {
+    const contributionLevels = {
+      '51-1': 'level-1',
+      '51-3': 'level-3',
+      '51-4': 'level-3',
+      '52-3': 'level-3',
+      '52-4': 'level-3'
+    };
+
+    contributionGrid.replaceChildren();
+    for (let week = 1; week <= 52; week++) {
+      for (let day = 0; day < 7; day++) {
+        const cell = document.createElement('span');
+        const level = contributionLevels[`${week}-${day}`];
+        if (level) cell.className = level;
+        contributionGrid.appendChild(cell);
+      }
+    }
+  }
+
   /* ---------- Sticky header on scroll ---------- */
   const header = document.getElementById('siteHeader');
   const scrollTopBtn = document.getElementById('scrollTopBtn');

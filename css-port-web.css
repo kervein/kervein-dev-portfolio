@@ -786,7 +786,7 @@ input, textarea{ font-family: inherit; }
 .github-calendar{ border: 1px solid #3a424c; border-radius: 12px; padding: 22px 20px 18px; overflow: hidden; }
 .github-months{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   margin: 0 0 8px 54px;
   color: #e6edf5;
   font-size: .86rem;
@@ -796,8 +796,9 @@ input, textarea{ font-family: inherit; }
 .github-weekdays{ display: flex; flex-direction: column; justify-content: space-around; padding: 2px 0; color: #e6edf5; font-size: .82rem; }
 .contribution-grid{
   display: grid;
-  grid-template-columns: repeat(24, minmax(5px, 1fr));
+  grid-template-columns: repeat(52, minmax(4px, 1fr));
   grid-template-rows: repeat(7, 1fr);
+  grid-auto-flow: column;
   gap: 6px;
 }
 .contribution-grid span{
