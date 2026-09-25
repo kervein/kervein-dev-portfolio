@@ -546,6 +546,7 @@ input, textarea{ font-family: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 32px 26px;
+  text-align: center;
   transition: transform .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
 }
 .service-card:hover{
@@ -554,20 +555,19 @@ input, textarea{ font-family: inherit; }
   background: var(--surface-2);
 }
 .service-icon{
-  width: 52px; height: 52px;
+  width: 68px; height: 68px;
   border-radius: 14px;
   background: var(--gradient-soft);
   color: var(--orange);
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
+  margin: 0 auto 24px;
 }
-.service-icon svg{ width: 24px; height: 24px; }
+.service-icon svg{ width: 30px; height: 30px; }
 .service-card h3{
   font-family: var(--font-display);
   font-size: 1.08rem;
-  margin: 0 0 10px;
+  margin: 0;
 }
-.service-card p{ margin: 0; color: var(--text-muted); font-size: .9rem; }
 
 /* =============================================================
    Projects
