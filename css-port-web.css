@@ -230,7 +230,7 @@ input, textarea{ font-family: inherit; }
    ============================================================= */
 .hero{
   position: relative;
-  padding: 140px 0 100px;
+  padding: 118px 0 78px;
   overflow: hidden;
 }
 .hero::before{
