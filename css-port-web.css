@@ -685,6 +685,9 @@ input, textarea{ font-family: inherit; }
 .project-side .project-stack{ gap: 6px; }
 .project-side .project-stack span{ padding: 5px 9px; font-size: .68rem; }
 .project-side .project-link{ font-size: .82rem; }
+.project-side .project-thumb{ aspect-ratio: 16/8; }
+.project-side .project-tag{ font-size: .65rem; padding: 6px 9px; }
+.project-primary .project-thumb{ aspect-ratio: 16/8.5; }
 .project-primary .project-body{ padding: 28px 30px; }
 .project-primary .project-body h3{ font-size: 1.45rem; }
 .project-primary .project-body p{ color: var(--text-muted); }
@@ -693,6 +696,32 @@ input, textarea{ font-family: inherit; }
   color: #f9f5ef;
   border-color: rgba(255,162,60,.18);
   background: rgba(255,162,60,.08);
+}
+.project-thumb{
+  aspect-ratio: 16/10;
+  position: relative;
+  display: flex; align-items: flex-end; justify-content: flex-start;
+  padding: 18px;
+  overflow: hidden;
+}
+.project-thumb::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.3));
+}
+.thumb-counter24{ background: linear-gradient(140deg, rgba(255,90,60,.20), rgba(10,10,10,.65)), url('ET.png') center/cover no-repeat; }
+.thumb-counter25{ background: linear-gradient(140deg, rgba(255,85,70,.18), rgba(10,10,10,.65)), url('ET (1).png') center/cover no-repeat; }
+.thumb-labflow{ background: linear-gradient(140deg, rgba(255,90,60,.12), rgba(10,10,10,.35)), url('ET (2).png') center/cover no-repeat; }
+.project-tag{
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: .76rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(0,0,0,.72);
+  border: 1px solid rgba(255,255,255,.08);
 }
 .project-body{ padding: 24px; }
 .project-body h3{
