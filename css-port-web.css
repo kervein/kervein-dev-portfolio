@@ -885,7 +885,7 @@ input, textarea{ font-family: inherit; }
 .stack-section{
   padding: 68px 0 74px;
   border-top: 1px solid var(--border);
-  background: var(--bg-soft);
+  background: var(--bg);
 }
 .stack-heading{
   display: flex;
@@ -1035,6 +1035,34 @@ input, textarea{ font-family: inherit; }
 
   .services-grid{ grid-template-columns: 1fr; }
   .form-row{ grid-template-columns: 1fr; }
+
+  .hero{ padding: 104px 0 68px; }
+  .hero-copy{ min-width: 0; }
+  .hero-actions .btn{ flex: 1 1 160px; }
+
+  .about{ padding: 84px 0; }
+  .about-copy .section-desc{ text-align: left; }
+  .education-entry-heading{ align-items: flex-start; flex-direction: column; gap: 4px; }
+  .education-entry-heading span{ white-space: normal; }
+
+  .stack-section{ padding: 56px 0 62px; }
+  .stack-list{ gap: 10px; }
+  .stack-chip{ min-height: 48px; padding: 9px 15px; font-size: .86rem; }
+
+  .services{ padding: 58px 0 82px; }
+  .services-heading{ margin-bottom: 28px; }
+
+  .github-section{ padding: 58px 0 68px; }
+  .github-heading{ margin-bottom: 20px; }
+  .github-contributions{ padding: 10px; }
+  .github-calendar{ overflow-x: auto; padding: 16px 14px 14px; }
+  .github-months,
+  .github-calendar-layout,
+  .github-legend{ min-width: 720px; }
+  .github-months{ margin-left: 54px; }
+  .github-calendar-layout{ gap: 8px; }
+  .contribution-grid{ gap: 5px; }
+  .github-legend{ margin-top: 14px; }
 
   .float-chip{ display: none; }
   .hero-glow-ring{ width: 78vw; }
