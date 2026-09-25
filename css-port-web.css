@@ -531,7 +531,7 @@ input, textarea{ font-family: inherit; }
 /* =============================================================
    Services
    ============================================================= */
-.services{ padding: 120px 0; border-top: 1px solid var(--border); }
+.services{ padding: 72px 0 120px; border-top: 1px solid var(--border); }
 .services-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
