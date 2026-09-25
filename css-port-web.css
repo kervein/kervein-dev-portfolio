@@ -578,7 +578,7 @@ input, textarea{ font-family: inherit; }
   --projects-ink: var(--text);
   --projects-muted: var(--text-muted);
   --projects-line: var(--border);
-  padding: 120px 0;
+  padding: 72px 0 96px;
   border-top: 1px solid var(--border);
   background: var(--bg);
   color: var(--projects-ink);
@@ -590,8 +590,7 @@ input, textarea{ font-family: inherit; }
   font-size: .82rem;
   margin: 0 0 14px;
 }
-.projects-title{ margin-bottom: 18px; }
-.projects-description{ margin-bottom: 56px; }
+.projects .section-head{ margin-bottom: 22px; }
 .projects-grid{
   position: relative;
   display: grid;
@@ -701,7 +700,7 @@ input, textarea{ font-family: inherit; }
 /* =============================================================
    Contact
    ============================================================= */
-.contact{ padding: 120px 0; border-top: 1px solid var(--border); }
+.contact{ padding: 76px 0 88px; border-top: 1px solid var(--border); }
 .contact-grid{
   display: grid;
   grid-template-columns: .9fr 1.1fr;
