@@ -517,9 +517,16 @@ input, textarea{ font-family: inherit; }
 .stat-label{ font-size: .82rem; color: var(--text-muted); }
 
 .about-copy .section-desc{ text-align: justify; }
+.about-heading-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.about-heading-row .eyebrow{ margin: 0 0 14px; }
+.about-heading-row .eyebrow:last-child{ text-align: right; }
 
 .work-experience{ margin: 34px 0 38px; }
-.work-experience > .eyebrow{ margin-bottom: 20px; }
 .work-entry + .work-entry{ margin-top: 26px; }
 .work-entry-heading{
   display: flex;
@@ -995,6 +1002,8 @@ input, textarea{ font-family: inherit; }
 
   .work-entry-heading{ align-items: flex-start; flex-direction: column; gap: 4px; }
   .work-entry-heading > span{ white-space: normal; }
+  .about-heading-row{ align-items: flex-start; }
+  .about-heading-row .eyebrow:last-child{ text-align: right; }
 
   .footer-inner{ flex-direction: column; text-align: center; gap: 14px; }
   .projects{ padding: 92px 0 104px; }
