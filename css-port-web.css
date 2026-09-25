@@ -528,62 +528,6 @@ input, textarea{ font-family: inherit; }
   font-size: 1.2rem;
   margin: 0 0 12px;
 }
-.skills-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-.skill-chip{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: var(--radius-pill);
-  background: rgba(255,162,60,.12);
-  color: var(--text);
-  border: 1px solid rgba(255,162,60,.18);
-  font-size: .88rem;
-}
-
-/* =============================================================
-   Stack
-   ============================================================= */
-.stack-section{
-  padding: 68px 0 74px;
-  border-top: 1px solid var(--border);
-  background: var(--bg-soft);
-}
-.stack-heading{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 28px;
-}
-.stack-heading .eyebrow{ margin: 0; text-align: center; }
-.stack-list{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 16px;
-}
-.stack-chip{
-  display: inline-flex;
-  align-items: center;
-  min-height: 54px;
-  padding: 10px 22px;
-  border: 1px solid rgba(255,162,60,.24);
-  border-radius: var(--radius-sm);
-  background: rgba(255,162,60,.09);
-  color: var(--text);
-  font-family: var(--font-mono);
-  font-size: .98rem;
-  transition: transform .25s var(--ease), border-color .25s ease, background .25s ease;
-}
-.stack-chip:hover{
-  transform: translateY(-3px);
-  border-color: rgba(255,162,60,.58);
-  background: rgba(255,162,60,.16);
-}
-
 /* =============================================================
    Services
    ============================================================= */
@@ -802,6 +746,61 @@ input, textarea{ font-family: inherit; }
   margin: 0;
   font-size: .85rem;
   color: #4ade80;
+}
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.skill-chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(255,162,60,.12);
+  color: var(--text);
+  border: 1px solid rgba(255,162,60,.18);
+  font-size: .88rem;
+}
+
+/* =============================================================
+   Stack
+   ============================================================= */
+.stack-section{
+  padding: 68px 0 74px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+.stack-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.stack-heading .eyebrow{ margin: 0; text-align: center; }
+.stack-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 16px;
+}
+.stack-chip{
+  display: inline-flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 10px 22px;
+  border: 1px solid rgba(255,162,60,.24);
+  border-radius: var(--radius-sm);
+  background: rgba(255,162,60,.09);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: .98rem;
+  transition: transform .25s var(--ease), border-color .25s ease, background .25s ease;
+}
+.stack-chip:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,162,60,.58);
+  background: rgba(255,162,60,.16);
 }
 
 /* =============================================================
