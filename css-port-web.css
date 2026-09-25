@@ -490,22 +490,40 @@ input, textarea{ font-family: inherit; }
 }
 .stat-label{ font-size: .82rem; color: var(--text-muted); }
 
-.about-list{ margin: 30px 0 34px; display: flex; flex-direction: column; gap: 22px; }
-.about-item{ display: flex; gap: 18px; }
-.about-item-num{
-  font-family: var(--font-mono);
-  font-size: .82rem;
-  color: var(--orange);
-  padding-top: 3px;
-  min-width: 24px;
-}
-.about-item h3{
-  font-family: var(--font-display);
-  font-size: 1.06rem;
-  margin: 0 0 4px;
-}
-.about-item p{ margin: 0; color: var(--text-muted); font-size: .93rem; }
 .about-copy .section-desc{ text-align: justify; }
+
+.work-experience{ margin: 34px 0 38px; }
+.work-experience > .eyebrow{ margin-bottom: 20px; }
+.work-entry + .work-entry{ margin-top: 26px; }
+.work-entry-heading{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+.work-entry-heading h3{
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  margin: 0 0 2px;
+}
+.work-entry-heading a{
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.work-entry-heading > span{
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: .8rem;
+  white-space: nowrap;
+}
+.work-entry ul{
+  margin: 8px 0 0 18px;
+  padding-left: 16px;
+  color: var(--text-muted);
+  font-size: .92rem;
+}
+.work-entry li + li{ margin-top: 5px; }
 
 .education-skills{
   display: grid;
@@ -947,6 +965,9 @@ input, textarea{ font-family: inherit; }
   .hero-glow-ring{ width: 78vw; }
 
   .about-stat-card{ right: 4px; bottom: -22px; padding: 14px 20px; }
+
+  .work-entry-heading{ align-items: flex-start; flex-direction: column; gap: 4px; }
+  .work-entry-heading > span{ white-space: normal; }
 
   .footer-inner{ flex-direction: column; text-align: center; gap: 14px; }
   .projects{ padding: 92px 0 104px; }
