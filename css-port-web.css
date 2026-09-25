@@ -750,6 +750,7 @@ input, textarea{ font-family: inherit; }
 }
 .github-heading .eyebrow{ margin: 0; color: var(--text-dim); }
 .github-link{
+  margin-left: auto;
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: .82rem;
@@ -771,18 +772,6 @@ input, textarea{ font-family: inherit; }
   box-shadow: 0 18px 48px -28px rgba(255,90,60,.45);
   transform: translateY(-3px);
 }
-.github-summary{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 0 2px 14px;
-  color: #edf2fa;
-  font-family: var(--font-body);
-}
-.github-summary strong{ font-size: 1.08rem; font-weight: 500; }
-.github-summary span{ color: #9ba3af; font-size: .92rem; }
-.github-summary b{ padding-left: 8px; color: #9ba3af; }
 .github-calendar{ border: 1px solid #3a424c; border-radius: 12px; padding: 22px 20px 18px; overflow: hidden; }
 .github-months{
   display: grid;
