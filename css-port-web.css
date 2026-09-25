@@ -1039,6 +1039,16 @@ input, textarea{ font-family: inherit; }
   .hero{ padding: 104px 0 68px; }
   .hero-copy{ min-width: 0; }
   .hero-actions .btn{ flex: 1 1 160px; }
+  .terminal{ max-width: 100%; }
+  .terminal-title{ font-size: .68rem; }
+  .terminal-body{
+    padding: 16px 14px 18px;
+    font-size: .72rem;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    overflow-x: hidden;
+  }
 
   .about{ padding: 84px 0; }
   .about-copy .section-desc{ text-align: left; }
