@@ -556,20 +556,10 @@ input, textarea{ font-family: inherit; }
 .stack-heading{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
   margin-bottom: 28px;
 }
-.stack-heading .eyebrow{ margin: 0; }
-.stack-all-link{
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  font-size: .82rem;
-  letter-spacing: .06em;
-  transition: color .25s ease;
-}
-.stack-all-link span{ padding-left: 7px; font-size: 1rem; }
-.stack-all-link:hover{ color: var(--orange); }
+.stack-heading .eyebrow{ margin: 0; text-align: center; }
 .stack-list{
   display: flex;
   flex-wrap: wrap;
@@ -592,11 +582,6 @@ input, textarea{ font-family: inherit; }
   transform: translateY(-3px);
   border-color: rgba(255,162,60,.58);
   background: rgba(255,162,60,.16);
-}
-.stack-more{
-  border-style: dashed;
-  color: var(--text-muted);
-  background: transparent;
 }
 
 /* =============================================================
