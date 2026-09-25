@@ -490,7 +490,10 @@ input, textarea{ font-family: inherit; }
 }
 .stat-label{ font-size: .82rem; color: var(--text-muted); }
 
-.about-copy .section-desc{ text-align: justify; }
+.section-desc:not(.center),
+.work-entry li,
+.education-entry > p,
+.project-body p{ text-align: justify; }
 .about-heading-row .eyebrow{ margin: 0 0 14px; }
 
 .work-experience{ margin: 34px 0 38px; }
@@ -1051,7 +1054,6 @@ input, textarea{ font-family: inherit; }
   }
 
   .about{ padding: 84px 0; }
-  .about-copy .section-desc{ text-align: left; }
   .education-entry-heading{ align-items: flex-start; flex-direction: column; gap: 4px; }
   .education-entry-heading span{ white-space: normal; }
 
