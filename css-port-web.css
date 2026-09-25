@@ -508,19 +508,17 @@ input, textarea{ font-family: inherit; }
 
 .education-skills{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-bottom: 30px;
 }
-.education-card,
-.skills-card{
+.education-card{
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 24px;
 }
-.education-card .eyebrow,
-.skills-card .eyebrow{
+.education-card .eyebrow{
   margin-bottom: 16px;
 }
 .education-card h3{
