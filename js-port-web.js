@@ -10,24 +10,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- GitHub contribution calendar ---------- */
   const contributionGrid = document.querySelector('.contribution-grid');
-  if (contributionGrid) {
-    const contributionLevels = {
-      '51-1': 'level-1',
-      '51-3': 'level-3',
-      '51-4': 'level-3',
-      '52-3': 'level-3',
-      '52-4': 'level-3'
+  const contributionMonths = document.querySelector('.github-months');
+  if (contributionGrid && contributionMonths) {
+    const githubContributionsUrl = 'https://github-contributions-api.jogruber.de/v4/kervein?y=last';
+
+    const renderContributions = (contributions) => {
+      const weeks = [];
+      for (let index = 0; index < contributions.length; index += 7) {
+        weeks.push(contributions.slice(index, index + 7));
+      }
+
+      contributionGrid.style.gridTemplateColumns = `repeat(${weeks.length}, minmax(4px, 1fr))`;
+      contributionGrid.replaceChildren();
+      weeks.flat().forEach((contribution) => {
+        const cell = document.createElement('span');
+        const countLabel = `${contribution.count} contribution${contribution.count === 1 ? '' : 's'}`;
+        const dateLabel = new Date(`${contribution.date}T00:00:00`).toLocaleDateString(undefined, {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric'
+        });
+
+        if (contribution.level > 0) cell.className = `level-${contribution.level}`;
+        cell.title = `${countLabel} on ${dateLabel}`;
+        cell.setAttribute('aria-label', `${countLabel} on ${dateLabel}`);
+        contributionGrid.appendChild(cell);
+      });
+
+      contributionMonths.replaceChildren();
+      contributionMonths.style.gridTemplateColumns = `repeat(${weeks.length}, minmax(4px, 1fr))`;
+      const seenMonths = new Set();
+      weeks.forEach((week, weekIndex) => {
+        const firstDayOfMonth = week.find((contribution) => contribution.date.slice(-2) === '01');
+        if (!firstDayOfMonth) return;
+
+        const monthKey = firstDayOfMonth.date.slice(0, 7);
+        if (seenMonths.has(monthKey)) return;
+        seenMonths.add(monthKey);
+
+        const label = document.createElement('span');
+        label.textContent = new Date(`${firstDayOfMonth.date}T00:00:00`).toLocaleDateString(undefined, { month: 'short' });
+        label.style.gridColumn = weekIndex + 1;
+        contributionMonths.appendChild(label);
+      });
     };
 
-    contributionGrid.replaceChildren();
-    for (let week = 1; week <= 52; week++) {
-      for (let day = 0; day < 7; day++) {
-        const cell = document.createElement('span');
-        const level = contributionLevels[`${week}-${day}`];
-        if (level) cell.className = level;
-        contributionGrid.appendChild(cell);
-      }
-    }
+    fetch(githubContributionsUrl, { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error('GitHub contributions could not be loaded.');
+        return response.json();
+      })
+      .then((data) => renderContributions(data.contributions || []))
+      .catch(() => {
+        contributionGrid.replaceChildren();
+        contributionMonths.replaceChildren();
+      });
   }
 
   /* ---------- Sticky header on scroll ---------- */
