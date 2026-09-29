@@ -8,7 +8,7 @@
 <body>
   <p>Loading portfolio...</p>
   <script>
-    fetch('html-port-web.html')
+    fetch('html-port-web.html', { cache: 'no-store' })
       .then(response => {
         if (!response.ok) throw new Error('Portfolio page could not be loaded.');
         return response.text();
